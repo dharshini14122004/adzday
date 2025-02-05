@@ -1,0 +1,312 @@
+
+// 'use client'
+
+// import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+
+// const people = [
+//   {
+//     name: 'Create a Brand',
+//     title: 'Click here to add and actional brand that can',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'AppXcess',
+//     title: '4 Projects Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'NextGen Solutions',
+//     title: '3 Projects Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'ProFusion Labs',
+//     title: '5 Projects Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'Creative Minds',
+//     title: '2 Projects Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'TechSphere',
+//     title: '6 Projects Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'InnoWorks',
+//     title: '1 Project Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+// ];
+
+// export default function Brand() {
+//   const [searchQuery, setSearchQuery] = useState('');
+//   const [isExpanded, setIsExpanded] = useState(false);
+//   const navigate = useNavigate();
+//   const filteredPeople = people.filter((person) =>
+//     person.name.toLowerCase().includes(searchQuery.toLowerCase())
+//   );
+
+//   const handleSearchClick = () => {
+//     setIsExpanded(true);
+//   };
+
+//   const handleSearchBlur = () => {
+//     setIsExpanded(false);
+//   };
+
+//   return (
+//     <main className="main-content py-3 lg:pl-0">
+//       <div className="content-container px-4 sm:px-6 lg:px-3">
+//         <div className="header-container md:flex md:items-center md:justify-between bg-gray-500 p-4 rounded-lg">
+//           <div className="header-title-container flex-1 min-w-0">
+//             <h3 className="header-title text-2xl font-bold text-white sm:truncate sm:text-3xl sm:tracking-tight">
+//               Brands
+//             </h3>
+//             <div className="header-description text-sm text-gray-300 mt-1">
+//               Select the project and create your brand
+//             </div>
+//           </div>
+//           <div className="search-bar-container mt-4 flex md:mt-0 md:ml-4">
+//             <input
+//               type="text"
+//               placeholder="Search"
+//               value={searchQuery}
+//               onChange={(e) => setSearchQuery(e.target.value)}
+//               onClick={handleSearchClick}
+//               onBlur={handleSearchBlur}
+//               className={`search-input w-48 px-4 py-2 text-sm rounded-md border border-gray-300 shadow-xs bg-white/10 text-white placeholder-gray-500 placeholder-opacity-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out ${
+//                 isExpanded ? 'w-80' : ''
+//               }`}
+//             />
+//           </div>
+//         </div>
+
+//         {/* Filtered People List Section */}
+//         <div className="people-list-section mt-6">
+//           <ul role="list" className="people-grid grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 mt-4">
+//             {filteredPeople.slice(0, 4).map((person) => (
+//               <li
+//                 key={person.name}
+//                 className={`people-item col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow-sm cursor-pointer ${person.name === 'Create a Brand' ? 'create-brand-item' : ''}`}
+//                 onClick={() => person.name === 'Create a Brand' && navigate('/brand/create')}
+//               >
+//                 <div className="people-content flex flex-1 flex-col p-8 h-full">
+//                   <h3 className="people-name mt-6 text-base font-medium text-gray-900">{person.name}</h3>
+//                   <dl className="people-details mt-1 flex grow flex-col justify-between">
+//                     <dt className="sr-only">Title</dt>
+//                     <dd className="people-title text-sm text-gray-500">{person.title}</dd>
+//                   </dl>
+//                 </div>
+//               </li>
+//             ))}
+//           </ul>
+
+//           <ul role="list" className="people-grid grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 mt-4">
+//             {filteredPeople.slice(4).map((person) => (
+//               <li
+//                 key={person.name}
+//                 className="people-item col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow-sm"
+//               >
+//                 <div className="people-content flex flex-1 flex-col p-8 h-full">
+//                   <h3 className="people-name mt-6 text-base font-medium text-gray-900">{person.name}</h3>
+//                   <dl className="people-details mt-1 flex grow flex-col justify-between">
+//                     <dt className="sr-only">Title</dt>
+//                     <dd className="people-title text-sm text-gray-500">{person.title}</dd>
+//                   </dl>
+//                 </div>
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+//       </div>
+//     </main>
+//   );
+// }
+
+
+
+// 'use client'
+
+// import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+
+// const people = [
+//   {
+//     name: 'Create a Brand',
+//     title: 'Click here to add and actional brand that can',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'AppXcess',
+//     title: '4 Projects Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'NextGen Solutions',
+//     title: '3 Projects Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'ProFusion Labs',
+//     title: '5 Projects Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'Creative Minds',
+//     title: '2 Projects Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'TechSphere',
+//     title: '6 Projects Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+//   {
+//     name: 'InnoWorks',
+//     title: '1 Project Created',
+//     role: '',
+//     email: '',
+//     telephone: '',
+//     imageUrl: '',
+//   },
+// ];
+
+// export default function Brand() {
+//   const [searchQuery, setSearchQuery] = useState('');
+//   const [isExpanded, setIsExpanded] = useState(false);
+//   const navigate = useNavigate();
+//   const filteredPeople = people.filter((person) =>
+//     person.name.toLowerCase().includes(searchQuery.toLowerCase())
+//   );
+
+//   const handleSearchClick = () => {
+//     setIsExpanded(true);
+//   };
+
+//   const handleSearchBlur = () => {
+//     setIsExpanded(false);
+//   };
+
+//   return (
+//     <main className="main-content py-3 lg:pl-0">
+//       <div className="content-container px-4 sm:px-6 lg:px-3">
+//         <div className="header-container md:flex md:items-center md:justify-between bg-gray-500 p-4 rounded-lg">
+//           <div className="header-title-container flex-1 min-w-0">
+//             <h3 className="header-title text-2xl font-bold text-white sm:truncate sm:text-3xl sm:tracking-tight">
+//               Brands
+//             </h3>
+//             <div className="header-description text-sm text-gray-300 mt-1">
+//               Select the project and create your brand
+//             </div>
+//           </div>
+//           <div className="search-bar-container mt-4 flex md:mt-0 md:ml-4">
+//             <input
+//               type="text"
+//               placeholder="Search"
+//               value={searchQuery}
+//               onChange={(e) => setSearchQuery(e.target.value)}
+//               onClick={handleSearchClick}
+//               onBlur={handleSearchBlur}
+//               className={`search-input w-48 px-4 py-2 text-sm rounded-md border border-gray-300 shadow-xs bg-white/10 text-white placeholder-gray-500 placeholder-opacity-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out ${
+//                 isExpanded ? 'w-80' : ''
+//               }`}
+//             />
+//           </div>
+//         </div>
+
+//         {/* Filtered People List Section */}
+//         <div className="people-list-section mt-6">
+//           <ul role="list" className="people-grid grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 mt-4">
+//             {filteredPeople.slice(0, 4).map((person) => (
+//               <li
+//                 key={person.name}
+//                 className={`people-item col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow-sm cursor-pointer ${person.name === 'Create a Brand' ? 'create-brand-item' : ''}`}
+//                 onClick={() => person.name === 'Create a Brand' && navigate('/brand/create')}
+//               >
+//                 <div className="people-content flex flex-1 flex-col p-8 h-full">
+//                   <h3 className="people-name mt-6 text-base font-medium text-gray-900">{person.name}</h3>
+//                   <dl className="people-details mt-1 flex grow flex-col justify-between">
+//                     <dt className="sr-only">Title</dt>
+//                     <dd className="people-title text-sm text-gray-500">{person.title}</dd>
+//                   </dl>
+//                   {person.name !== 'Create a Brand' && (
+//                     <div className="button-container mt-4 flex justify-center gap-4 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+//                       <button className="edit-button text-sm text-blue-600">Edit</button>
+//                       <button className="delete-button text-sm text-red-600">Delete</button>
+//                     </div>
+//                   )}
+//                 </div>
+//               </li>
+//             ))}
+//           </ul>
+
+//           <ul role="list" className="people-grid grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 mt-4">
+//             {filteredPeople.slice(4).map((person) => (
+//               <li
+//                 key={person.name}
+//                 className="people-item col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow-sm group"
+//               >
+//                 <div className="people-content flex flex-1 flex-col p-8 h-full">
+//                   <h3 className="people-name mt-6 text-base font-medium text-gray-900">{person.name}</h3>
+//                   <dl className="people-details mt-1 flex grow flex-col justify-between">
+//                     <dt className="sr-only">Title</dt>
+//                     <dd className="people-title text-sm text-gray-500">{person.title}</dd>
+//                   </dl>
+//                   {person.name !== 'Create a Brand' && (
+//                     <div className="button-container mt-4 flex justify-center gap-4 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+//                       <button className="edit-button text-sm text-blue-600">Edit</button>
+//                       <button className="delete-button text-sm text-red-600">Delete</button>
+//                     </div>
+//                   )}
+//                 </div>
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+//       </div>
+//     </main>
+//   );
+// }

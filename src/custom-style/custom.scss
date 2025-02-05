@@ -1,0 +1,150 @@
+$primary-color: #00008B;
+$secondary-color: #FF0000; 
+$primary-lightcolor: #3b82f6;
+$secondary-lightcolor: #ec4899; 
+$background-color_1: #626262;
+$background-color_2: #000000;
+$background-color_3: white;
+
+/*# sourceMappingURL=custom.css.map */
+.md\ {
+	&:flex.md\ {
+		&:items-center.md\ {
+			&:justify-between.bg-gray-500.p-4.rounded-lg {
+				background-color: $background-color_1;
+			}
+		}
+	}
+}
+.grid.grid-cols-1.gap-6.sm\ {
+	&:grid-cols-2.md\ {
+		&:grid-cols-3.lg\ {
+			&:grid-cols-4 {
+				padding-top: 100px;
+			}
+		}
+	}
+}
+.header-container {
+	background-color: $background-color_2;
+	padding: 0.8rem !important;
+  padding-left: 1rem !important;
+	
+}
+.people-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 2rem;
+	padding-top: 1rem;
+}
+
+.px-4.sm\ {
+	&:px-6.lg\ {
+		&:px-8 {
+			padding: 0px 20px 0px;
+		}
+	}
+}
+
+
+.hidden.lg\:fixed.lg\:inset-y-0.lg\:z-50.lg\:flex.lg\:w-72.lg\:flex-col.bg-gray-900.px-6 {
+  display: none !important; /* hidden */
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .hidden.lg\:fixed.lg\:inset-y-0.lg\:z-50.lg\:flex.lg\:w-72.lg\:flex-col.bg-gray-900.px-6 {
+    display: flex !important; /* lg:flex */
+    position: fixed !important; /* lg:fixed */
+    top: 0 !important; /* lg:inset-y-0 (top: 0) */
+    bottom: 0 !important; /* lg:inset-y-0 (bottom: 0) */
+    z-index: 50 !important; /* lg:z-50 */
+    width: 18rem !important; /* lg:w-72 (288px) */
+    flex-direction: column !important; /* lg:flex-col */
+    background: linear-gradient(to bottom,$primary-color 0%,$secondary-color 150%) !important; /* Gradient with specific stops */
+    padding-left: 1.5rem !important; /* px-6 (24px) */
+    padding-right: 1.5rem !important; /* px-6 (24px) */
+  }
+}
+
+
+
+
+
+@keyframes growAnimation {
+	0% {
+	  transform: scale(1);
+	}
+	100% {
+	  transform: scale(1.1); /* Adjust the scale as needed */
+	}
+  }
+  
+  .create-brand-item:hover {
+	animation: growAnimation 0.3s ease-in-out;
+	animation-fill-mode: forwards;
+  }
+  
+  .create-brand-item:hover .people-name {
+	color:$background-color_3; /* Change to your desired color */
+  }
+  
+  .create-brand-item:hover .people-title {
+	color:$background-color_3; /* Change to your desired color */
+  }
+   
+
+
+
+  .people-item {
+	width: 100%;
+	aspect-ratio: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1.5rem;
+	position: relative;
+	border-radius: 10px;
+	background-color: $background-color_3;
+	
+	&::before {
+	  content: "";
+	  position: absolute;
+	  inset: -4px;
+	  background: linear-gradient(to bottom, $primary-lightcolor, $secondary-lightcolor);
+	  border-radius: inherit;
+	  z-index: -1;
+	}
+  
+}
+
+
+.button-container:hover,
+.button-container.group:hover{
+	background: linear-gradient(to bottom, $primary-lightcolor, $secondary-lightcolor);
+	border-radius: 8px;
+}
+
+.button-container{
+	background: linear-gradient(to bottom, $primary-lightcolor, $secondary-lightcolor);
+	border-radius: 8px;
+}
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+  
+
+
+
+  
